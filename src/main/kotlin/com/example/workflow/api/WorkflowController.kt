@@ -39,3 +39,5 @@ class ApiExceptionHandler {
     @ResponseStatus(HttpStatus.INTERNAL_SERVER_ERROR)
     fun generic(ex: Exception) = mapOf("error" to (ex.message ?: "Internal server error"))
 }
+
+
