@@ -1,0 +1,9 @@
+RECRUITER QUICK CHECK
+
+1. Install JDK 21 and Docker Desktop.
+2. Extract the ZIP.
+3. Open the folder in IntelliJ IDEA.
+4. Run: docker compose up -d postgres
+5. Run: gradlew.bat test
+6. Run: gradlew.bat bootRun
+7. Open: http://localhost:8080/swagger-ui.html
