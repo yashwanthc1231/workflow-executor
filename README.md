@@ -1,4 +1,4 @@
-# Interview-Ready Small Workflow Executor
+# Small Workflow Executor
 
 This is an expanded version of the Small Workflow Executor take-home project.
 
@@ -26,10 +26,10 @@ Example:
 
 ```json
 {
-  "steps": \[
+  "steps": \\\[
     {"id":"a","type":"task"},
-    {"id":"b","type":"task","dependsOn":\["a"]},
-    {"id":"c","type":"task","dependsOn":\["a"]}
+    {"id":"b","type":"task","dependsOn":\\\["a"]},
+    {"id":"c","type":"task","dependsOn":\\\["a"]}
   ]
 }
 ```
@@ -119,10 +119,10 @@ Swagger:
 
 ```bash
 curl -X POST http://localhost:8080/workflows   -H "Content-Type: application/json"   -H "Idempotency-Key: demo-001"   -d '{
-    "steps": \[
+    "steps": \\\[
       {"id":"a","type":"task"},
-      {"id":"b","type":"task","dependsOn":\["a"]},
-      {"id":"c","type":"task","dependsOn":\["a"]}
+      {"id":"b","type":"task","dependsOn":\\\["a"]},
+      {"id":"c","type":"task","dependsOn":\\\["a"]}
     ]
   }'
 ```
@@ -137,7 +137,7 @@ To demonstrate failure:
 
 ```json
 {
-  "steps": \[
+  "steps": \\\[
     {"id":"a","type":"fail"}
   ]
 }
